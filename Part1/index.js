@@ -31,24 +31,33 @@ function play(val){
     //winner result
     if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight){
         alert('The winner is ' + topLeft)
+        return 
     }else if (topLeft !== undefined && topLeft === middleCenter && topLeft === bottomRight){
         alert('The winner is ' + topLeft)
+        return
     }else if (topLeft !== undefined && topLeft === middleLeft && topLeft === bottomLeft){
         alert('The winner is ' + topLeft)
+        return
     }else if (middleLeft !== undefined && middleLeft === middleCenter && middleLeft === middleRight){
         alert('The winner is ' + middleLeft)
+        return 
     }else if (bottomLeft !== undefined && bottomLeft === bottomCenter && bottomLeft === bottomRight){
         alert('The winner is ' + bottomLeft)
+        return
     }else if (bottomLeft !== undefined && bottomLeft === middleCenter && bottomLeft === topRight){
         alert('The winner is ' + bottomLeft)
+        return
     }else if (bottomLeft !== undefined && bottomLeft === middleLeft && bottomLeft === topLeft){
         alert('The winner is ' + bottomLeft)
+        return
     }else if (topCenter !== undefined && topCenter === middleCenter && topCenter === bottomCenter){
         alert('The winner is ' + topCenter)
+        return
     }else if (topRight !== undefined && topRight === middleRight && topRight === bottomRight){
         alert('The winner is ' + topRight)
+        return
     }
-
+//alert if CAT game
     for (let i = 0; i <= 8; i++){
         if (board[i] === undefined){
             boardFull = false;
@@ -58,3 +67,12 @@ function play(val){
         alert('CATS')
     }
 }
+
+//function to reset game
+function reset(){
+    for(let i = 0; i <= 8; i++){
+        document.getElementById(i).innerText = '';
+        
+    }
+}
+
